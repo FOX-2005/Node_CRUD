@@ -9,21 +9,25 @@ function Register(){
      
     function handleSubmit(event){
         event.preventDefault()
-        axios.post('http://localhost:2005/register', {username,email,password})
+        axios.post(`http://localhost:2005/register`, {username,email,password})
         .then(res => console.log(res.data))
         .catch(err => console.log(err))
     }
        return(
            
     <div className='form'>
-           <form onSubmit={handleSubmit}>
-                     <label for="username">Username:</label>
-                     <input type="text" name="username" onChange={e => setUserName(e.target.value)} required/>
-                     <label for="email">Email::</label>
-                     <input type="email" name="email" onChange={e => setEmail(e.target.value)} required/>
-                     <label for="password">password:</label>
-                     <input type="password" name="password" onChange={e => setPassword(e.target.value)} required/>
-                     <button type="submit" name="submit">submit</button>
+          <form onSubmit={handleSubmit}>
+        
+                <label htmlFor="username">Username:</label>
+                <input type="text" name="username" onChange={e => setUserName(e.target.value)} required />
+
+                <label htmlFor="email">Email:</label>
+                <input type="email" name="email" onChange={e => setEmail(e.target.value)} required />
+
+                <label htmlFor="password">Password:</label>
+                <input type="password" name="password" onChange={e => setPassword(e.target.value)} required />
+
+                <button type="submit" name="submit">insert</button>
                 </form> 
            </div>
            

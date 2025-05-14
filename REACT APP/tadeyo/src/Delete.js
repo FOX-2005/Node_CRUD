@@ -7,7 +7,7 @@ function Delete() {
 
     function handleSubmit(event) {
         event.preventDefault()
-        axios.post('http://localhost:2005/delete', { email })
+        axios.delete(`http://localhost:2005/delete/${email}`)
             .then(res => console.log(res.data))
             .catch(err => console.log(err))
     }
@@ -17,7 +17,7 @@ function Delete() {
             <form onSubmit={handleSubmit}>
                 <label for="email">Email::</label>
                 <input type="email" name="email" onChange={e => setEmail(e.target.value)} required />
-                <button type="submit" name="submit">submit</button>
+                <button type="submit" name="submit">delete</button>
             </form>
         </div>
 

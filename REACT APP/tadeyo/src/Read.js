@@ -1,6 +1,7 @@
 import React from "react";
 import axios, { Axios } from "axios";
 import { useEffect,useState } from "react";
+import './App.css'
 
 function Read(){
     const [result, setResult] = useState([]);

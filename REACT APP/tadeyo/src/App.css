@@ -1,6 +1,6 @@
     body {
     font-family: Arial, sans-serif;
-    background-color: #9e7979;
+    background-color: #cae4d4;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -71,4 +71,53 @@ ul a {
 
 ul a:hover {
     background-color: #f13210;
+}
+/* Style the table container */
+.form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+/* Style the table */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    text-align: left;
+    font-family: sans-serif;
+}
+
+/* Add borders and spacing */
+th, td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+/* Style the table header */
+thead {
+    background-color: #45c0ab;
+    color: rgb(73, 89, 182);
+    font-weight: bold;
+}
+
+/* Alternate row colors */
+tbody tr:nth-child(even) {
+    background-color: #a75d5d;
+}
+
+/* Add hover effect */
+tbody tr:hover {
+    background-color: #ddd;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+    table {
+        width: 100%;
+    }
+
+    th, td {
+        padding: 10px;
+    }
 }
